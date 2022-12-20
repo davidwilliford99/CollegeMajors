@@ -18,6 +18,7 @@ public class Major {
     @Id
     @GeneratedValue
     private int id;
+
     private String name;
     private String category;
     private String total;

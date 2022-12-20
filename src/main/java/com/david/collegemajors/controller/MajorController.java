@@ -38,16 +38,21 @@ public class MajorController {
         return service.getMajors();
     }
 
-    @GetMapping("/major/{id}")
+    @GetMapping("/majorById/{id}")
+    @ResponseBody
     public Major findMajorById(@PathVariable int id) {
         return service.getMajorById(id);
     }
 
-    @GetMapping("/major/{name}")
+    @GetMapping("/majorByName/{name}")
     public Major findMajorByName(@PathVariable String name) {
         return service.getMajorByName(name);
     }
 
+    @GetMapping("/majorByCategory/{category}")
+    public List<Major> findMajorByCategory(@PathVariable String category) {
+        return service.getMajorsByCategory(category);
+    }
 
     /**
      * PUT Methods
