@@ -1,9 +1,33 @@
 import './App.css';
+import { Route, Routes } from "react-router-dom"
+import { Header } from './components/Header';
+import { MajorPage } from './pages/MajorPage';
+import { WelcomePage } from './pages/WelcomePage';
+import { Sidebar } from './components/Sidebar';
+import { Footer } from './components/Footer';
+
 
 function App() {
   return (
-    <div className="violet-500">
-      <h1>College Majors</h1>
+    <div id='App'>
+
+      <div id='header'>
+        <Header/>
+      </div>
+
+      <div id='content' className='flex'>
+        <Sidebar/>
+
+        <Routes>
+          <Route path="/" element={< WelcomePage/>} />
+          <Route path="/Major" element={<MajorPage />} />
+        </Routes>
+      </div>
+
+      <div id='footer'>
+        <Footer/>
+    </div>
+
     </div>
   );
 }
