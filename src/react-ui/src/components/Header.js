@@ -14,10 +14,10 @@ export const Header = () => {
         </div>
 
         <div id='header-right'>
-            <ul className='flex list-none text-cyan-500 text-l'>
-              <li className='m-3'>Home</li>
-              <li className='m-3'>Contact</li>
-              <li className='m-3'>About</li>
+            <ul className='flex list-none text-white text-l h-full'>
+              <li className='p-3 mt-10'>Home</li>
+              <li className='p-3 mt-10'>Contact</li>
+              <li className='p-3 mt-10'>About</li>
             </ul>
         </div>
 
