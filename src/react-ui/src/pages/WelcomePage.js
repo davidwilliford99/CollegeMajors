@@ -1,7 +1,7 @@
 import { React } from 'react';
-import { HighestEarningCard } from '../components/HighestEarningCard';
-import { PopularCard } from '../components/PopularCard';
-import { WelcomeCard } from '../components/WelcomeCard';
+import { HighestEarningCard } from '../cards/HighestEarningCard';
+import { PopularCard } from '../cards/PopularCard';
+import { WelcomeCard } from '../cards/WelcomeCard';
 
 export const WelcomePage = () => {
   return (

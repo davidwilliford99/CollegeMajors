@@ -7,17 +7,17 @@ import { ReactComponent as Logo } from './../Assets/Logo.svg';
 
 export const Header = () => {
   return (
-    <div id='header' className="flex justify-between w-full bg-dark h-28 p-5">
+    <div id='header' className="flex justify-between w-full bg-dark h-20 p-2 pt-4">
 
         <div id='header-left'>
             <Logo className='h-full'/>
         </div>
 
         <div id='header-right'>
-            <ul className='flex list-none text-white text-l h-full'>
-              <li className='p-3 mt-10'>Home</li>
-              <li className='p-3 mt-10'>Contact</li>
-              <li className='p-3 mt-10'>About</li>
+            <ul className='flex list-none text-neutral-400 text-l h-full'>
+              <li className='m-3 mr-10 mt-7'>Home</li>
+              <li className='m-3 mr-10 mt-7'>Contact</li>
+              <li className='m-3 mr-10 mt-7'>About</li>
             </ul>
         </div>
 

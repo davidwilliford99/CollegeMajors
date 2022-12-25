@@ -6,6 +6,9 @@ import { WelcomePage } from './pages/WelcomePage';
 import { Sidebar } from './components/Sidebar';
 import { Footer } from './components/Footer';
 
+// link to csv dataset
+// https://www.kaggle.com/datasets/thedevastator/uncovering-insights-to-college-majors-and-their
+
 
 function App() {
   return (
