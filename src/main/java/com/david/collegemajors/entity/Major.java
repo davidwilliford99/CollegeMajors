@@ -21,12 +21,12 @@ public class Major {
 
     private String name;
     private String category;
-    private String total;
+    private Integer total;
     private String employed;
     private String unemployed;
     private String employedFullTime;
     private String unemploymentRate;
-    private String medianSalary;
+    private Integer medianSalary;
     private String p25Salary;
     private String p75Salary;
 }

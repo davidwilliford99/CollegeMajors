@@ -58,6 +58,10 @@ public class MajorController {
     public List<Major> findTop10PayingMajors() {
         return service.getTop10PayingMajors();
     }
+    @GetMapping("/top10PopularMajors")
+    public List<Major> findTop10PopularMajors() {
+        return service.getTop10PopularMajors();
+    }
 
 
     /**

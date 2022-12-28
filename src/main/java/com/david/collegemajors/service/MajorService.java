@@ -1,6 +1,8 @@
 package com.david.collegemajors.service;
 
 import com.david.collegemajors.entity.Major;
+import com.david.collegemajors.entity.comparators.MedianSalaryComparator;
+import com.david.collegemajors.entity.comparators.TotalComparator;
 import com.david.collegemajors.repository.MajorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -123,8 +126,30 @@ public class MajorService {
      * @return
      */
     public List<Major> getTop10PayingMajors() {
-        Page<Major> page = repository.findAll(PageRequest.of(0, 10, Sort.by(Sort.Order.desc("medianSalary"))));
-        return page.getContent();
+        List<Major> majors = repository.findAll();
+        Collections.sort(majors, new MedianSalaryComparator());
+
+        List<Major> top10 = new ArrayList<Major>();
+        for(int i = 0; i < 10; i++) {
+            top10.add(majors.get(i));
+        }
+        return top10;
+    }
+
+    /**
+     * Returns top 10 most popular majors
+     *
+     * @return
+     */
+    public List<Major> getTop10PopularMajors() {
+        List<Major> majors = repository.findAll();
+        Collections.sort(majors, new TotalComparator());
+
+        List<Major> top10 = new ArrayList<Major>();
+        for(int i = 0; i < 10; i++) {
+            top10.add(majors.get(i));
+        }
+        return top10;
     }
 
 }

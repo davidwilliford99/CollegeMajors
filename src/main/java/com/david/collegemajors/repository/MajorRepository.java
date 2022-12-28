@@ -15,4 +15,5 @@ public interface MajorRepository extends JpaRepository<Major, Integer> {
     List<Major> findByCategory(String category);
 
     Page<Major> findAll(Pageable pageable);
+
 }

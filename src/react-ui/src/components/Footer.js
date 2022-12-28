@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <div id='footer' className="flex justify-between w-full bg-dark h-12 p-3">
 
-        <h1>Footer</h1>
+        <h1 className='text-dark'>Footer</h1>
 
     </div>
   );

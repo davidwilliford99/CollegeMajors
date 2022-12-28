@@ -22,9 +22,9 @@ export const HighestEarningCard = () => {
       
   return (
 
-    <div id='highest-earning-card' className="w-1/2 bg-card-dark mr-5 mb-5 text-white p-10 rounded-2xl tracking-wide">
+    <div id='highest-earning-card' className="w-full bg-card-dark mr-5 mb-5 text-white p-10 rounded-2xl tracking-wide">
       <h1 className='text-center'>Highest Earning Majors</h1>
-      <p className='text-center text-lg text-neutral-300 my-5'>Sorted by median salary<br></br>Hover the chart to see major details</p>
+      <p className='text-center text-lg text-neutral-500 my-5'>Sorted by median salary<br></br>Hover (or click) the chart to see major details</p>
 
       {/* Bar Graph SVG */}
       <div id='bar-graph-container' className='h-3/4 flex items-center justify-center'>
