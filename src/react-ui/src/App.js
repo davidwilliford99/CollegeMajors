@@ -9,6 +9,8 @@ import { Footer } from './components/Footer';
 // link to csv dataset
 // https://www.kaggle.com/datasets/thedevastator/uncovering-insights-to-college-majors-and-their
 
+// Notice some routes have url parameters (majorName for example)
+
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={< WelcomePage/>} />
-          <Route path="/Major" element={<MajorPage />} />
+          <Route path="/major/:majorName" element={<MajorPage />} />
         </Routes>
       </div>
 

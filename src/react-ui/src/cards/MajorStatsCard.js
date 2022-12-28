@@ -28,7 +28,7 @@ export const MajorStatsCard = (props) => {
             <p>Median Salary:</p><p>${major.medianSalary}</p>
           </div>
           <div id='stat' className='flex w-1/4 justify-between my-1.5'>
-            <p>Unemployment Rate:</p><p>{Math.round((major.unemploymentRate) * 100) / 100}%</p>
+            <p>Unemployment Rate:</p><p>{(Math.round((major.unemploymentRate) * 1000) / 10)}%</p>
           </div>
           <div id='stat' className='flex w-1/4 justify-between my-1.5'>
             <p>Total Unemployed:</p><p>{major.unemployed}</p>

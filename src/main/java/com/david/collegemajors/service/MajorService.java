@@ -3,11 +3,15 @@ package com.david.collegemajors.service;
 import com.david.collegemajors.entity.Major;
 import com.david.collegemajors.repository.MajorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Service Class for Major
@@ -112,4 +116,15 @@ public class MajorService {
     public List<Major> getMajorsByCategory(@PathVariable String category) {
         return repository.findByCategory(category);
     }
+
+    /**
+     * Returns top 10 paying majors
+     *
+     * @return
+     */
+    public List<Major> getTop10PayingMajors() {
+        Page<Major> page = repository.findAll(PageRequest.of(0, 10, Sort.by(Sort.Order.desc("medianSalary"))));
+        return page.getContent();
+    }
+
 }

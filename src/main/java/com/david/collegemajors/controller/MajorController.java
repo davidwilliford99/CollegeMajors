@@ -54,6 +54,11 @@ public class MajorController {
     public List<Major> findMajorByCategory(@PathVariable String category) {
         return service.getMajorsByCategory(category);
     }
+    @GetMapping("/top10PayingMajors")
+    public List<Major> findTop10PayingMajors() {
+        return service.getTop10PayingMajors();
+    }
+
 
     /**
      * PUT Methods
