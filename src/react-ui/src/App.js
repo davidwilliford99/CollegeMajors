@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import { Header } from './components/Header';
 import { MajorPage } from './pages/MajorPage';
 import { WelcomePage } from './pages/WelcomePage';
+import { CategoriesPage } from './pages/CategoriesPage';
 import { Sidebar } from './components/Sidebar';
 import { Footer } from './components/Footer';
 
@@ -25,6 +26,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={< WelcomePage/>} />
+          <Route path="/categories" element={<CategoriesPage />}/>
           <Route path="/major/:majorName" element={<MajorPage />} />
         </Routes>
       </div>

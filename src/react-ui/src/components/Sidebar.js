@@ -1,4 +1,5 @@
 import { React } from 'react';
+import { NavLink } from 'react-router-dom';
 
 // icons 
 import { ReactComponent as Home } from './../Assets/home.svg';
@@ -6,9 +7,16 @@ import { ReactComponent as Category } from './../Assets/category.svg';
 import { ReactComponent as Forum } from './../Assets/forum.svg';
 import { ReactComponent as All } from './../Assets/all.svg';
 
+
 /**
- * Header Component
+ * Sidebar Component
  */
+
+const navLinkStyles = ({isActive}) => {
+  return (isActive ? 'text-white fill-white font-bold' : 'text-neutral-400')
+}
+
+
 
 export const Sidebar = () => {
   return (
@@ -18,22 +26,35 @@ export const Sidebar = () => {
         <button type="submit"><i class="fa fa-search"></i></button>
         
         <div id='items-container' className='text-l'>
-          <div id='sidebar-item' className='p-2 border-r-2 flex'>
-            <Home className='fill-white'/>
-            <h2 className='ml-1'>Home</h2>
-          </div>
-          <div id='sidebar-item' className='p-2 flex text-neutral-400'>
-            <Category className='fill-neutral-400'/>
-            <h2 className='ml-1'>Categories</h2>
-          </div>
-          <div id='sidebar-item' className='p-2 flex text-neutral-400'>
-            <All className='fill-neutral-400'/>
-            <h2 className='ml-1'>All Majors</h2>
-          </div>
-          <div id='sidebar-item' className='p-2 flex text-neutral-400'>
-            <Forum className='fill-neutral-400'/>
-            <h2 className='ml-1'>Forum</h2>
-          </div>
+
+          <NavLink to="/" className={navLinkStyles}>
+            <div id='sidebar-item' className='hover:bg-dark transition p-2 flex'>
+              <Home className='fill-neutral-400'/>
+              <h2 className='ml-1'>Home</h2>
+            </div>
+          </NavLink>
+
+          <NavLink to="/Categories" className={navLinkStyles}>
+            <div id='sidebar-item' className='hover:bg-dark transition p-2 flex'>
+              <Category className='fill-neutral-400'/>
+              <h2 className='ml-1'>Categories</h2>
+            </div>
+          </NavLink>
+
+          <NavLink to="/All" className={navLinkStyles}>
+            <div id='sidebar-item' className='hover:bg-dark transition p-2 flex'>
+              <All className='fill-neutral-400'/>
+              <h2 className='ml-1'>All Majors</h2>
+            </div>
+          </NavLink>
+
+          <NavLink to="/Forum" className={navLinkStyles}>
+            <div id='sidebar-item' className='hover:bg-dark transition p-2 flex'>
+              <Forum className='fill-neutral-400'/>
+              <h2 className='ml-1'>Forum</h2>
+            </div>
+          </NavLink>
+
 
         </div>
 

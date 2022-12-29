@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
  */
 
 
-export const RelatedMajorsCard = (props) => {
+export const CategoryMajorsCard = (props) => {
 
     const category = props.category;
     const [majors, setMajors] = useState([]);
@@ -21,14 +21,12 @@ export const RelatedMajorsCard = (props) => {
     useEffect(() => {
         getMajors();
       }); 
-
-
     
     return (
-        <div id='related-majors-card' className="px-20 bg-card-dark mx-5 text-white p-10 rounded-2xl w-full mb-5 tracking-wide">
+        <div id='related-majors-card' className="h-full px-20 bg-card-dark mx-5 text-white p-10 rounded-2xl w-4/5 mb-5 tracking-wide border border-neutral-300">
 
             <div id='title' className='flex justify-between items-center'>
-                <h1 className='mb-10'>Similar Majors</h1>
+                <h1 className='mb-10'>{category}</h1>
                 <h1 className='text-lg h-full'>Median Salary</h1>
             </div>
 

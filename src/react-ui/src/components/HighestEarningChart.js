@@ -10,7 +10,7 @@ export const HighestEarningChart = (props) => {
     const majors = props.majors;
 
     return (
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height="100%" className='max-h-96'>
             <BarChart
             width={500}
             height={200}
