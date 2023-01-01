@@ -63,6 +63,28 @@ public class MajorController {
         return service.getTop10PopularMajors();
     }
 
+    @GetMapping("/majorsByUnemploymentInc")
+    public List<Major> findMajorsByUnemploymentInc() {
+        return service.getMajorsByUnemploymentInc();
+    }
+    @GetMapping("/majorsByUnemploymentDec")
+    public List<Major> findMajorsByUnemploymentDec() {
+        return service.getMajorsByUnemploymentDec();
+    }
+    @GetMapping("/majorsByTotal")
+    public List<Major> findMajorsByTotal() {
+        return service.getMajorsByPopularity();
+    }
+    @GetMapping("/majorsByName")
+    public List<Major> findMajorsByName() {
+        return service.getMajorsByName();
+    }
+    @GetMapping("/majorsByEmployed")
+    public List<Major> findMajorsByEmployed() {
+        return service.getMajorsByEmployment();
+    }
+
+
 
     /**
      * PUT Methods

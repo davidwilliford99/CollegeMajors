@@ -6,6 +6,8 @@ import { WelcomePage } from './pages/WelcomePage';
 import { CategoriesPage } from './pages/CategoriesPage';
 import { Sidebar } from './components/Sidebar';
 import { Footer } from './components/Footer';
+import { AllMajorsPage } from './pages/AllMajorsPage';
+import { ForumPage } from './pages/ForumPage';
 
 // link to csv dataset
 // https://www.kaggle.com/datasets/thedevastator/uncovering-insights-to-college-majors-and-their
@@ -27,6 +29,8 @@ function App() {
         <Routes>
           <Route path="/" element={< WelcomePage/>} />
           <Route path="/categories" element={<CategoriesPage />}/>
+          <Route path="/all" element={<AllMajorsPage />}/>
+          <Route path="/forum" element={<ForumPage/>}/>
           <Route path="/major/:majorName" element={<MajorPage />} />
         </Routes>
       </div>

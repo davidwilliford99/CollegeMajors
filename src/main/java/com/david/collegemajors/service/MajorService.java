@@ -1,8 +1,7 @@
 package com.david.collegemajors.service;
 
 import com.david.collegemajors.entity.Major;
-import com.david.collegemajors.entity.comparators.MedianSalaryComparator;
-import com.david.collegemajors.entity.comparators.TotalComparator;
+import com.david.collegemajors.entity.comparators.*;
 import com.david.collegemajors.repository.MajorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -150,6 +149,86 @@ public class MajorService {
             top10.add(majors.get(i));
         }
         return top10;
+    }
+
+    /**
+     * Returns majors in alphabetical order
+     *
+     * @return
+     */
+    public List<Major> getMajorsByName() {
+        List<Major> majors = repository.findAll();
+        Collections.sort(majors, new NameComparator());
+
+        List<Major> list = new ArrayList<Major>();
+        for(int i = 0; i < majors.size(); i++) {
+            list.add(majors.get(i));
+        }
+        return list;
+    }
+
+    /**
+     * Returns majors in order of popularity
+     *
+     * @return
+     */
+    public List<Major> getMajorsByPopularity() {
+        List<Major> majors = repository.findAll();
+        Collections.sort(majors, new TotalComparator());
+
+        List<Major> list = new ArrayList<Major>();
+        for(int i = 0; i < majors.size(); i++) {
+            list.add(majors.get(i));
+        }
+        return list;
+    }
+
+    /**
+     * Returns majors in order of unemployment (inc)
+     *
+     * @return
+     */
+    public List<Major> getMajorsByUnemploymentInc() {
+        List<Major> majors = repository.findAll();
+        Collections.sort(majors, new UnemploymentIncComparator());
+
+        List<Major> list = new ArrayList<Major>();
+        for(int i = 0; i < majors.size(); i++) {
+            list.add(majors.get(i));
+        }
+        return list;
+    }
+
+    /**
+     * Returns majors in order of unemployment (dec)
+     *
+     * @return
+     */
+    public List<Major> getMajorsByUnemploymentDec() {
+        List<Major> majors = repository.findAll();
+        Collections.sort(majors, new UnemploymentDecComparator());
+
+        List<Major> list = new ArrayList<Major>();
+        for(int i = 0; i < majors.size(); i++) {
+            list.add(majors.get(i));
+        }
+        return list;
+    }
+
+    /**
+     * Returns majors in order of total employed people
+     *
+     * @return
+     */
+    public List<Major> getMajorsByEmployment() {
+        List<Major> majors = repository.findAll();
+        Collections.sort(majors, new UnemploymentDecComparator());
+
+        List<Major> list = new ArrayList<Major>();
+        for(int i = 0; i < majors.size(); i++) {
+            list.add(majors.get(i));
+        }
+        return list;
     }
 
 }

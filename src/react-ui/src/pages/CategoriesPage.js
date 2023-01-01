@@ -43,7 +43,7 @@ export const CategoriesPage = () => {
               {
                 categories.map((cat) => {
                   return <div className='flex text-sm justify-between text-cyan-400 border-2 border-cyan-600 cursor-pointer rounded-lg 
-                                         hover:bg-cyan-900 hover:text-neutral-400 transition' 
+                                         hover:bg-cyan-600 hover:text-neutral-300 transition' 
                               onClick={() => setCategory(cat)}>
                             <h2 className='m-3'>{cat}</h2>
                         </div>

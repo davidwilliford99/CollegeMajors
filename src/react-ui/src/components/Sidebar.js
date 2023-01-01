@@ -34,21 +34,21 @@ export const Sidebar = () => {
             </div>
           </NavLink>
 
-          <NavLink to="/Categories" className={navLinkStyles}>
+          <NavLink to="/categories" className={navLinkStyles}>
             <div id='sidebar-item' className='hover:bg-dark transition p-2 flex'>
               <Category className='fill-neutral-400'/>
               <h2 className='ml-1'>Categories</h2>
             </div>
           </NavLink>
 
-          <NavLink to="/All" className={navLinkStyles}>
+          <NavLink to="/all" className={navLinkStyles}>
             <div id='sidebar-item' className='hover:bg-dark transition p-2 flex'>
               <All className='fill-neutral-400'/>
               <h2 className='ml-1'>All Majors</h2>
             </div>
           </NavLink>
 
-          <NavLink to="/Forum" className={navLinkStyles}>
+          <NavLink to="/forum" className={navLinkStyles}>
             <div id='sidebar-item' className='hover:bg-dark transition p-2 flex'>
               <Forum className='fill-neutral-400'/>
               <h2 className='ml-1'>Forum</h2>
