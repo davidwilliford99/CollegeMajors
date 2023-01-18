@@ -7,8 +7,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Also consider adding the @RequestMapping("/api/v1/majors") to this class
+ * This will prevent duplicated links and add more detail to the API endpoints
+ */
+
 @RestController
 @CrossOrigin
+@RequestMapping
 public class MajorController {
 
     @Autowired
