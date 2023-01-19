@@ -1,5 +1,4 @@
 import { React, useState, useEffect } from 'react';
-import { HighestEarningChart } from '../components/HighestEarningChart';
 import { PopularChart } from '../components/PopularChart';
 
 

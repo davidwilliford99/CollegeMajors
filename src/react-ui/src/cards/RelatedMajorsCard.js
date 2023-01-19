@@ -37,7 +37,7 @@ export const RelatedMajorsCard = (props) => {
                 {
                     majors.map((maj) => {
                         return  <Link to={`/major/${maj.name}`}>
-                                    <div className='flex text-lg justify-between my-3 hover:text-cyan-400 transition-all'>
+                                    <div className='flex text-sm 2xl:text-lg justify-between m-3 hover:text-cyan-400 transition-all'>
                                         <h2>{maj.name}</h2>
                                         <h2>${maj.medianSalary}</h2>
                                     </div>
