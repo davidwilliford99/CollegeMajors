@@ -13,3 +13,6 @@ Since this web application requires a database that is hosted locally on my mach
 * MySql (Database)
 
 ### Sample Images 
+![CM-sample3](https://user-images.githubusercontent.com/92596851/229863725-7e87d0ca-adf3-4779-a52b-784ed6d74dfb.png)
+![CM-sample1](https://user-images.githubusercontent.com/92596851/229863728-3771fe42-2933-470b-997d-870a9b4ad3e3.png)
+![CM-sample2](https://user-images.githubusercontent.com/92596851/229863732-b1bc592c-7280-446e-b2bc-275a93362d03.png)
