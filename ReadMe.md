@@ -1,11 +1,10 @@
 # College Majors
-*Contributors: David Williford*
 
 ## Brief 
-Due to an interest in education, this web application is made for those curious about statistics between the different undergraduate university majors (US only). The inspiration for this project was to take a dataset, store it in a Database, then create an API and a frontend to display this information in a user-friendly manner. The primary lessons from this project are the importance of research, documentation and patience.
+This web application is made to view statistics between the different undergraduate university majors from a survey on Kaggle.com. The inspiration for this project was to take a dataset, store it in a Database, then create an API and a frontend to display this information in a user-friendly manner. The primary reason for building this application is to have experience building a simple CRUD app using Spring Boot.
 
 
-### Stack Used 
+### Tech Used 
 * ReactJS (frontend)
 * Java Spring Boot (Backend)
 * MySql (Database)
